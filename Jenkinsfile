@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-
+    agent {
+        label 'worker-agent'
+    }
     stages{
         stage('deploy to S3'){
             steps{
